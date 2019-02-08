@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@containers/*": ["src/containers/*"],
+      "@reducers/*": ["src/reducers/*"],
+      "@shared/*": ["src/shared/*"],
+      "@router/*": ["src/router/*"],
+      "@sections/*": ["src/sections/*"],
+      "@dashboard/*": ["src/sections/Dashboard/*"],
+      "@dtranslations/*": ["src/translations/*"],
+      "@assets/*": ["src/assets/*"],
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
+  

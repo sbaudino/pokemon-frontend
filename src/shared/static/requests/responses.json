@@ -1,0 +1,5 @@
+{
+  "0": "error.connection",
+  "200": "main.success",
+  "500": "main.internal.error"
+}
