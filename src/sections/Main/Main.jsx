@@ -14,7 +14,7 @@ class Main extends React.PureComponent {
 
   render () {
     const { loading, total, pokemon } = this.props
-    
+
     return (
       <div className={style.wrapper}>
         <Images />

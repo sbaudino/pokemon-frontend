@@ -1,0 +1,37 @@
+.wrapper {
+  position: relative;
+  border: 1px solid $black-1;
+  background-color: $white-1;
+  flex: 1 0 26%;
+  margin: 0 $standard-space-2 $standard-space-2 $standard-space-2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: $border-radius-1;
+  min-height: 200px;
+
+  &:hover {
+    background-color: $gray-5;
+  }
+
+  img {
+    margin-bottom: $standard-space-1
+  }
+
+  .pokemonName {
+    position: absolute;
+    top: 160px;
+    font-family: 'Bold';
+    text-transform: capitalize;
+  }
+
+  @include non-tablet {
+    flex: 1 0 34%;
+  }
+
+  @include mobile {
+    flex: 1 0 51%;
+  }
+}

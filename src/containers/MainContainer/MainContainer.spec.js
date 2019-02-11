@@ -10,7 +10,7 @@ import messagesEn from '@translations/en.json'
 
 describe('(Redux Container) MainContainer', () => {
   let container, component
-  
+
   const total = 10
 
   beforeEach(() => {

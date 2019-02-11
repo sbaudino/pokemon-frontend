@@ -1,19 +1,32 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 
-// The pokemon name is replaced -f and -m in order to get the images properly for Nidora-f and Nidora-M
-const image = pokemon => {
-  const lastTwoCharacters = pokemon.slice(-2)
-  if (lastTwoCharacters === '-m') pokemon = pokemon.replace('-m', 'm')
-  if (lastTwoCharacters === '-f') pokemon = pokemon.replace('-f', 'f')
+import { image } from '@shared/utils'
 
-  return `http://pokestadium.com/sprites/xy/${pokemon}.gif`
-} 
+import style from './Item.scss'
 
-const Item = ({ item }) => (
-  <div>
-    <div><img src={image(item.name)}/></div>
-    <div>{item.name}</div>
-  </div>
-)
+class Item extends React.PureComponent {
+  constructor (props) {
+    super(props)
 
-export default Item
+    this.goToDetails = this.goToDetails.bind(this)
+  }
+
+  goToDetails () {
+    const { item } = this.props
+    this.props.history.push(`/pokemon/${item.name}`)
+  }
+
+  render () {
+    const { item } = this.props
+
+    return (
+      <div className={style.wrapper} onClick={this.goToDetails}>
+        <img src={image(item.name)} />
+        <div className={style.pokemonName}>{item.name}</div>
+      </div>
+    )
+  }
+}
+
+export default withRouter(Item)

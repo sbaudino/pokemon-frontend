@@ -1,0 +1,51 @@
+.wrapper {
+  position: relative;
+  border: 1px solid $black-1;
+  background-color: $white-1;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: $standard-space-1;
+  min-height: 200px;
+
+  .pokemonName {
+    font-family: 'Regular';
+    text-transform: capitalize;
+    margin: $standard-space-4 0;
+  }
+
+  .data {
+    align-self: flex-start;
+    padding-left: $standard-space-3;
+
+    .propName {
+      font-family: Bold;
+      font-size: $font-size-5;
+    }
+
+    .propValue {
+      font-family: Regular;
+      font-size: $font-size-6;
+    }
+
+    .habilities {
+      ul {
+        margin: $standard-space-4 0;
+
+        li {
+          font-size: $font-size-8;
+          span {
+            font-size: $font-size-7;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    div {
+      margin-bottom: $standard-space-3;
+    }
+  }
+}
